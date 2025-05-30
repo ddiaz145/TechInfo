@@ -32,6 +32,9 @@
       padding: 10px 0;
       text-align: center;
       width: 100%;
+      position: sticky;
+      top: 0;
+      z-index: 999;
     }
 
     nav a {
@@ -176,30 +179,27 @@
       line-height: 1.6;
     }
 
-    /* Skill bubbles styling */
-    .skill-bubbles {
+    /* Skills bubbles */
+    .skills-bubbles {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
       justify-content: center;
-      margin-top: 15px;
+      gap: 15px;
     }
 
-    .skill-bubble {
-      background-color: #0077b5;
+    .skill {
+      background-color: #333;
       color: white;
-      padding: 8px 15px;
-      border-radius: 20px;
-      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 30px;
       font-size: 16px;
-      user-select: none;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-      transition: background-color 0.3s ease;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s ease;
     }
 
-    .skill-bubble:hover {
-      background-color: #005983;
-      cursor: default;
+    .skill:hover {
+      transform: scale(1.1);
+      background-color: #555;
     }
   </style>
 </head>
@@ -223,7 +223,7 @@
   <section id="bio">
     <div>
       <h2>Bio</h2>
-      <p>Hi! My name is David Diaz and I'm a very passionate Network Engineer enthusiast. I have an associates degree in IT Information Systems but I specialize in the Networking field. I've developed a strong foundation of taking responsibility of a whole network infrastructure, whether that would be setting up routing protocols, overviewing health devices, creating VLANs or backing up active configuration files. I tend to have a very strong personality which led to me land a lead network engineering role in my internship at ExpGateway. Curiosity is what keeps me going in this long everlasting field, as of now I'm learning Kali Lunix to see what loopholes I can find within my home lab to streghten my knowledge of securing the infrastructures I love to build!</p>
+      <p>Hi! My name is David Diaz and I'm a very passionate Network Engineer enthusiast...</p>
     </div>
   </section>
 
@@ -231,31 +231,27 @@
     <div>
       <h2>Experience</h2>
       <div class="timeline">
-
-        <!-- Newer Job First -->
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-           <h3>Lead Network Engineer</h3>
+            <h3>Lead Network Engineer</h3>
             <p><strong>ExpGateway</strong> — March 2025 to Present</p>
-            <p><strong>Network Designer:</strong> Ensuring scalability, security, and reliability of the network. Maintaining detailed network documentation and diagrams.</p>
-            <p><strong>Leadership and Team Management:</strong> Leading a team of network engineers. Communicating with management about network status, risks, and improvement plans.</p>
-            <p><strong>Troubleshooting:</strong> Diagnosing and resolving complex network issues. Monitoring network performance and availability.</p>
+            <p><strong>Network Designer:</strong> Ensuring scalability, security, and reliability of the network...</p>
+            <p><strong>Leadership and Team Management:</strong> Leading a team of network engineers...</p>
+            <p><strong>Troubleshooting:</strong> Diagnosing and resolving complex network issues...</p>
           </div>
         </div>
 
-        <!-- Older Job Last -->
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <h3>Sales Representative</h3>
             <p><strong>Maxs Cabinets</strong> — July 2024 to Dec 2024</p>
-            <p><strong>Customer Engagement:</strong> Provided exceptional customer service, actively listening to and understanding customer needs to recommend products and solutions that best meet their requirements, leading to positive customer feedback.</p>
-            <p><strong>Problem Resolution:</strong> Quickly addressed customer concerns by offering alternatives or solutions, helping to improve customer satisfaction and retention.</p>
-            <p><strong>Team Collaboration & Workflow Coordination:</strong> Worked alongside team members to coordinate incoming calls about order status, new inquiries, and questions, allowing for a seamless workflow.</p>
+            <p><strong>Customer Engagement:</strong> Provided exceptional customer service...</p>
+            <p><strong>Problem Resolution:</strong> Quickly addressed customer concerns...</p>
+            <p><strong>Team Collaboration & Workflow Coordination:</strong> Coordinated incoming calls...</p>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -263,19 +259,57 @@
   <section id="skills">
     <div>
       <h2>Skills</h2>
-      <div class="skill-bubbles">
-        <span class="skill-bubble">Wireshark</span>
-        <span class="skill-bubble">DHCP</span>
-        <span class="skill-bubble">OSPF</span>
-        <span class="skill-bubble">Etherchannel</span>
-        <span class="skill-bubble">Port Security</span>
-        <span class="skill-bubble">Linux</span>
-        <span class="skill-bubble">SSH</span>
-        <span class="skill-bubble">VLANs</span>
-        <span class="skill-bubble">802.1Q</span>
+      <div class="skills-bubbles">
+        <div class="skill">Wireshark</div>
+        <div class="skill">DHCP</div>
+        <div class="skill">OSPF</div>
+        <div class="skill">Etherchannel</div>
+        <div class="skill">Port Security</div>
+        <div class="skill">Linux</div>
+        <div class="skill">SSH</div>
+        <div class="skill">VLANs</div>
+        <div class="skill">802.1Q</div>
       </div>
     </div>
   </section>
 
   <section id="certifications">
-    <
+    <div>
+      <h2>Certifications</h2>
+      <p>Your certifications go here.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div>
+      <h2>Contact</h2>
+      <a href="mailto:your.email@example.com">your.email@example.com</a>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn" />
+      </a>
+    </div>
+  </section>
+
+  <script>
+    function revealOnScroll() {
+      const sections = document.querySelectorAll('section');
+      const triggerBottom = window.innerHeight * 0.9;
+
+      sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        if (sectionTop < triggerBottom) {
+          section.classList.add('visible');
+        }
+      });
+    }
+
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        revealOnScroll();
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('resize', revealOnScroll);
+      }, 50);
+    });
+  </script>
+</body>
+</html>
