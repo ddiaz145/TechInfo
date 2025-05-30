@@ -91,10 +91,6 @@
       transition: opacity 0.6s ease-out, transform 0.6s ease-out;
       text-align: center;
       scroll-margin-top: 150px;
-      background: none;
-      border: none;
-      border-radius: 0;
-      box-shadow: none;
     }
 
     section.visible {
@@ -144,11 +140,43 @@
     #contact a:hover {
       text-decoration: underline;
     }
+
+    /* Timeline styling */
+    .timeline {
+      position: relative;
+      padding-left: 30px;
+      border-left: 3px solid #000;
+      margin-top: 20px;
+      text-align: left;
+    }
+
+    .timeline-item {
+      margin-bottom: 60px;
+      position: relative;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -9px;
+      top: 5px;
+      width: 18px;
+      height: 18px;
+      background-color: white;
+      border: 3px solid black;
+      border-radius: 50%;
+    }
+
+    .timeline-content {
+      background-color: #f0f0f0;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1 class="site-title">David Diaz</h1>
+    <h1 class="site-title">John Doe</h1>
   </header>
 
   <nav>
@@ -173,7 +201,25 @@
   <section id="experience">
     <div>
       <h2>Experience</h2>
-      <p>Details about your work experience.</p>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>IT Support Specialist</h3>
+            <p><strong>TechCorp Solutions</strong> — Jan 2020 to Dec 2021</p>
+            <p>Provided desktop support, managed user accounts, and assisted with hardware troubleshooting in a fast-paced environment.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Network Technician</h3>
+            <p><strong>NetSecure Systems</strong> — Jan 2022 to Present</p>
+            <p>Installed and maintained network infrastructure, configured routers/switches, and led security audits for enterprise clients.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
