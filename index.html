@@ -175,6 +175,32 @@
       margin-bottom: 15px;
       line-height: 1.6;
     }
+
+    /* Skill bubbles styling */
+    .skill-bubbles {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 15px;
+    }
+
+    .skill-bubble {
+      background-color: #0077b5;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 16px;
+      user-select: none;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
+    }
+
+    .skill-bubble:hover {
+      background-color: #005983;
+      cursor: default;
+    }
   </style>
 </head>
 <body>
@@ -237,47 +263,19 @@
   <section id="skills">
     <div>
       <h2>Skills</h2>
-      <p>List your skills here.</p>
+      <div class="skill-bubbles">
+        <span class="skill-bubble">Wireshark</span>
+        <span class="skill-bubble">DHCP</span>
+        <span class="skill-bubble">OSPF</span>
+        <span class="skill-bubble">Etherchannel</span>
+        <span class="skill-bubble">Port Security</span>
+        <span class="skill-bubble">Linux</span>
+        <span class="skill-bubble">SSH</span>
+        <span class="skill-bubble">VLANs</span>
+        <span class="skill-bubble">802.1Q</span>
+      </div>
     </div>
   </section>
 
   <section id="certifications">
-    <div>
-      <h2>Certifications</h2>
-      <p>Your certifications go here.</p>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div>
-      <h2>Contact</h2>
-      <a href="mailto:your.email@example.com">your.email@example.com</a>
-      <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn" />
-      </a>
-    </div>
-  </section>
-
-  <script>
-    function revealOnScroll() {
-      const sections = document.querySelectorAll('section');
-      const triggerBottom = window.innerHeight * 0.9;
-
-      sections.forEach(section => {
-        const sectionTop = section.getBoundingClientRect().top;
-        if (sectionTop < triggerBottom) {
-          section.classList.add('visible');
-        }
-      });
-    }
-
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        revealOnScroll();
-        window.addEventListener('scroll', revealOnScroll);
-        window.addEventListener('resize', revealOnScroll);
-      }, 50);
-    });
-  </script>
-</body>
-</html>
+    <
