@@ -130,7 +130,7 @@
     #contact img {
       width: 24px;
       height: 24px;
-      filter: invert(39%) sepia(82%) saturate(3503%) hue-rotate(189deg) brightness(93%) contrast(92%);
+      filter: invert(36%) sepia(75%) saturate(2681%) hue-rotate(191deg) brightness(91%) contrast(90%);
     }
 
     #contact a {
@@ -198,7 +198,8 @@
 
     .certification-container {
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      align-items: center;
       gap: 30px;
       margin-top: 30px;
     }
@@ -206,8 +207,8 @@
     .certification-bubble {
       background-color: #fff;
       border: 2px solid #000;
-      border-radius: 50%;
-      width: 220px;
+      border-radius: 20px;
+      width: 200px;
       height: 180px;
       display: flex;
       flex-direction: column;
@@ -215,6 +216,8 @@
       justify-content: center;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       padding: 20px;
+      font-weight: bold;
+      color: #333;
       text-align: center;
     }
   </style>
@@ -294,16 +297,16 @@
       <h2>Certifications</h2>
       <div class="certification-container">
         <div class="certification-bubble">
-          <p style="font-size: 1.1em; margin-bottom: 12px; color: #333;">CCNA</p>
+          <p style="font-size: 1.1em; margin-bottom: 12px;">CCNA</p>
           <p style="font-size: 0.9em; word-break: break-word;">
-            Verification Code:<br>
+            Verification Code:<br />
             <strong>CSCO14812243</strong>
           </p>
         </div>
         <div class="certification-bubble">
-          <p style="font-size: 1.1em; margin-bottom: 12px; color: #333;">CompTIA Security+</p>
+          <p style="font-size: 1.1em; margin-bottom: 12px;">CompTIA Security+</p>
           <p style="font-size: 0.9em; word-break: break-word;">
-            Verification Code:<br>
+            Verification Code:<br />
             <strong>COMP001022713192</strong>
           </p>
         </div>
