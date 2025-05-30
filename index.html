@@ -32,6 +32,9 @@
       padding: 10px 0;
       text-align: center;
       width: 100%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     nav a {
@@ -127,7 +130,7 @@
     #contact img {
       width: 24px;
       height: 24px;
-      filter: none; /* removed filter */
+      filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(101%) contrast(101%);
     }
 
     #contact a {
@@ -176,49 +179,54 @@
       line-height: 1.6;
     }
 
-    .skill-bubble {
-      display: inline-block;
-      background-color: #0077b5;
-      color: white;
-      padding: 10px 20px;
-      margin: 5px;
+    .bubble-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .bubble {
+      background-color: #fff;
+      border: 2px solid #000;
       border-radius: 20px;
+      padding: 10px 20px;
       font-weight: bold;
-      font-size: 1em;
-      user-select: none;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .certification-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 30px;
     }
 
     .certification-bubble {
-      display: inline-block;
-      width: 180px;
-      height: 120px;
-      background-color: #0077b5;
-      color: white;
-      margin: 10px;
-      border-radius: 15px;
-      font-weight: bold;
-      font-size: 1.1em;
-      padding: 15px 10px;
-      box-sizing: border-box;
-      text-align: center;
-      user-select: none;
+      background-color: #fff;
+      border: 2px solid #000;
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      gap: 10px;
+      justify-content: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
-    .cert-code {
-      font-size: 0.9em;
-      background: rgba(255 255 255 / 0.3);
-      padding: 6px 8px;
-      border-radius: 6px;
-      color: #000;
-      user-select: text;
-      width: 90%;
-      margin: 0 auto;
-      word-break: break-word;
+    .certification-logo {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+
+    .certification-bubble p {
+      font-weight: bold;
+      color: #333;
+      margin: 0;
     }
   </style>
 </head>
@@ -242,7 +250,7 @@
   <section id="bio">
     <div>
       <h2>Bio</h2>
-      <p>Hi! My name is David Diaz and I'm a very passionate Network Engineer enthusiast. I have an associates degree in IT Information Systems but I specialize in the Networking field. I've developed a strong foundation of taking responsibility of a whole network infrastructure, whether that would be setting up routing protocols, overviewing health devices, creating VLANs or backing up active configuration files. I tend to have a very strong personality which led to me land a lead network engineering role in my internship at ExpGateway. Curiosity is what keeps me going in this long everlasting field, as of now I'm learning Kali Lunix to see what loopholes I can find within my home lab to streghten my knowledge of securing the infrastructures I love to build!</p>
+      <p>Hi! My name is David Diaz and I'm a very passionate Network Engineer enthusiast. I have an associates degree in IT Information Systems but I specialize in the Networking field. I've developed a strong foundation of taking responsibility of a whole network infrastructure, whether that would be setting up routing protocols, overviewing health devices, creating VLANs or backing up active configuration files. I tend to have a very strong personality which led to me land a lead network engineering role in my internship at ExpGateway. Curiosity is what keeps me going in this long everlasting field, as of now I'm learning Kali Linux to see what loopholes I can find within my home lab to strengthen my knowledge of securing the infrastructures I love to build!</p>
     </div>
   </section>
 
@@ -250,12 +258,10 @@
     <div>
       <h2>Experience</h2>
       <div class="timeline">
-
-        <!-- Newer Job First -->
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-           <h3>Lead Network Engineer</h3>
+            <h3>Lead Network Engineer</h3>
             <p><strong>ExpGateway</strong> — March 2025 to Present</p>
             <p><strong>Network Designer:</strong> Ensuring scalability, security, and reliability of the network. Maintaining detailed network documentation and diagrams.</p>
             <p><strong>Leadership and Team Management:</strong> Leading a team of network engineers. Communicating with management about network status, risks, and improvement plans.</p>
@@ -263,7 +269,6 @@
           </div>
         </div>
 
-        <!-- Older Job Last -->
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
@@ -274,7 +279,6 @@
             <p><strong>Team Collaboration & Workflow Coordination:</strong> Worked alongside team members to coordinate incoming calls about order status, new inquiries, and questions, allowing for a seamless workflow.</p>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -282,16 +286,16 @@
   <section id="skills">
     <div>
       <h2>Skills</h2>
-      <div>
-        <span class="skill-bubble">Wireshark</span>
-        <span class="skill-bubble">DHCP</span>
-        <span class="skill-bubble">OSPF</span>
-        <span class="skill-bubble">Etherchannel</span>
-        <span class="skill-bubble">Port Security</span>
-        <span class="skill-bubble">Linux</span>
-        <span class="skill-bubble">SSH</span>
-        <span class="skill-bubble">VLANs</span>
-        <span class="skill-bubble">802.1Q</span>
+      <div class="bubble-container">
+        <span class="bubble">Wireshark</span>
+        <span class="bubble">DHCP</span>
+        <span class="bubble">OSPF</span>
+        <span class="bubble">EtherChannel</span>
+        <span class="bubble">Port Security</span>
+        <span class="bubble">Linux</span>
+        <span class="bubble">SSH</span>
+        <span class="bubble">VLANs</span>
+        <span class="bubble">802.1Q</span>
       </div>
     </div>
   </section>
@@ -299,14 +303,14 @@
   <section id="certifications">
     <div>
       <h2>Certifications</h2>
-      <div>
+      <div class="certification-container">
         <div class="certification-bubble">
-          <div>CCNA</div>
-          <div class="cert-code">CSCO14812243</div>
+          <img src="https://www.freepnglogos.com/uploads/cisco-logo-png/cisco-logo-png-transparent-3.png" alt="CCNA Logo" class="certification-logo" />
+          <p>CCNA</p>
         </div>
         <div class="certification-bubble">
-          <div>COMPTIA Security+</div>
-          <div class="cert-code">COMP001022713192</div>
+          <img src="https://www.comptia.org/-/media/images/certifications/security-plus/security-plus-logo.png" alt="CompTIA Security+ Logo" class="certification-logo" />
+          <p>CompTIA Security+</p>
         </div>
       </div>
     </div>
@@ -316,7 +320,7 @@
     <div>
       <h2>Contact</h2>
       <a href="mailto:your.email@example.com">your.email@example.com</a>
-      <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
+      <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener">
         <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn" />
       </a>
     </div>
