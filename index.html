@@ -130,7 +130,7 @@
     #contact img {
       width: 24px;
       height: 24px;
-      filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(101%) contrast(101%);
+      /* Removed filter to keep blue colors visible */
     }
 
     #contact a {
@@ -320,8 +320,8 @@
     <div>
       <h2>Contact</h2>
       <a href="mailto:your.email@example.com">your.email@example.com</a>
-      <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn" />
+      <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" />
       </a>
     </div>
   </section>
