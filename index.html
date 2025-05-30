@@ -34,7 +34,7 @@
       width: 100%;
       position: sticky;
       top: 0;
-      z-index: 999;
+      z-index: 1000;
     }
 
     nav a {
@@ -179,26 +179,54 @@
       line-height: 1.6;
     }
 
-    .skills-bubbles {
+    .bubble-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 15px;
+      gap: 10px;
+      margin-top: 20px;
     }
 
-    .skill {
-      background-color: #333;
-      color: white;
+    .bubble {
+      background-color: #fff;
+      border: 2px solid #000;
+      border-radius: 20px;
       padding: 10px 20px;
-      border-radius: 30px;
-      font-size: 16px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-      transition: transform 0.2s ease;
+      font-weight: bold;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
     }
 
-    .skill:hover {
-      transform: scale(1.1);
-      background-color: #555;
+    .certification-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .certification-bubble {
+      background-color: #fff;
+      border: 2px solid #000;
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .certification-logo {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+
+    .certification-bubble p {
+      font-weight: bold;
+      color: #333;
+      margin: 0;
     }
   </style>
 </head>
@@ -222,7 +250,7 @@
   <section id="bio">
     <div>
       <h2>Bio</h2>
-      <p>Hi! My name is David Diaz and I am a passionate Network Engineer enthusiast. I have an associate degree in IT Information Systems with a specialization in networking. I have experience managing entire network infrastructures, including setting up routing protocols, monitoring device health, creating VLANs, and backing up configuration files. I held a lead network engineering internship at ExpGateway, where my proactive mindset and curiosity led to meaningful contributions. I am currently learning Kali Linux to identify and secure vulnerabilities within my home lab environment.</p>
+      <p>Hi! My name is David Diaz and I'm a very passionate Network Engineer enthusiast. I have an associates degree in IT Information Systems but I specialize in the Networking field. I've developed a strong foundation of taking responsibility of a whole network infrastructure, whether that would be setting up routing protocols, overviewing health devices, creating VLANs or backing up active configuration files. I tend to have a very strong personality which led to me land a lead network engineering role in my internship at ExpGateway. Curiosity is what keeps me going in this long everlasting field, as of now I'm learning Kali Linux to see what loopholes I can find within my home lab to strengthen my knowledge of securing the infrastructures I love to build!</p>
     </div>
   </section>
 
@@ -235,9 +263,9 @@
           <div class="timeline-content">
             <h3>Lead Network Engineer</h3>
             <p><strong>ExpGateway</strong> — March 2025 to Present</p>
-            <p><strong>Network Designer:</strong> Ensured scalability, security, and reliability of the network infrastructure. Maintained detailed network documentation and diagrams for operational clarity.</p>
-            <p><strong>Leadership and Team Management:</strong> Led a team of network engineers while communicating network status, risks, and improvements with senior management.</p>
-            <p><strong>Troubleshooting:</strong> Diagnosed and resolved complex network issues. Continuously monitored performance and system availability to maintain uptime.</p>
+            <p><strong>Network Designer:</strong> Ensuring scalability, security, and reliability of the network. Maintaining detailed network documentation and diagrams.</p>
+            <p><strong>Leadership and Team Management:</strong> Leading a team of network engineers. Communicating with management about network status, risks, and improvement plans.</p>
+            <p><strong>Troubleshooting:</strong> Diagnosing and resolving complex network issues. Monitoring network performance and availability.</p>
           </div>
         </div>
 
@@ -246,9 +274,9 @@
           <div class="timeline-content">
             <h3>Sales Representative</h3>
             <p><strong>Maxs Cabinets</strong> — July 2024 to Dec 2024</p>
-            <p><strong>Customer Engagement:</strong> Provided exceptional customer service, listened to customer needs, and recommended product solutions that received positive feedback.</p>
-            <p><strong>Problem Resolution:</strong> Resolved concerns quickly and effectively, helping to improve satisfaction and retention.</p>
-            <p><strong>Team Collaboration & Workflow Coordination:</strong> Worked with teammates to coordinate calls and inquiries, allowing for smooth workflow and communication.</p>
+            <p><strong>Customer Engagement:</strong> Provided exceptional customer service, actively listening to and understanding customer needs to recommend products and solutions that best meet their requirements, leading to positive customer feedback.</p>
+            <p><strong>Problem Resolution:</strong> Quickly addressed customer concerns by offering alternatives or solutions, helping to improve customer satisfaction and retention.</p>
+            <p><strong>Team Collaboration & Workflow Coordination:</strong> Worked alongside team members to coordinate incoming calls about order status, new inquiries, and questions, allowing for a seamless workflow.</p>
           </div>
         </div>
       </div>
@@ -258,16 +286,16 @@
   <section id="skills">
     <div>
       <h2>Skills</h2>
-      <div class="skills-bubbles">
-        <div class="skill">Wireshark</div>
-        <div class="skill">DHCP</div>
-        <div class="skill">OSPF</div>
-        <div class="skill">Etherchannel</div>
-        <div class="skill">Port Security</div>
-        <div class="skill">Linux</div>
-        <div class="skill">SSH</div>
-        <div class="skill">VLANs</div>
-        <div class="skill">802.1Q</div>
+      <div class="bubble-container">
+        <span class="bubble">Wireshark</span>
+        <span class="bubble">DHCP</span>
+        <span class="bubble">OSPF</span>
+        <span class="bubble">EtherChannel</span>
+        <span class="bubble">Port Security</span>
+        <span class="bubble">Linux</span>
+        <span class="bubble">SSH</span>
+        <span class="bubble">VLANs</span>
+        <span class="bubble">802.1Q</span>
       </div>
     </div>
   </section>
@@ -275,7 +303,16 @@
   <section id="certifications">
     <div>
       <h2>Certifications</h2>
-      <p>Your certifications go here.</p>
+      <div class="certification-container">
+        <div class="certification-bubble">
+          <img src="https://www.freepnglogos.com/uploads/cisco-logo-png/cisco-logo-png-transparent-3.png" alt="CCNA Logo" class="certification-logo" />
+          <p>CCNA</p>
+        </div>
+        <div class="certification-bubble">
+          <img src="https://www.comptia.org/-/media/images/certifications/security-plus/security-plus-logo.png" alt="CompTIA Security+ Logo" class="certification-logo" />
+          <p>CompTIA Security+</p>
+        </div>
+      </div>
     </div>
   </section>
 
