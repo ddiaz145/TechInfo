@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Me</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    nav { background: #333; color: #fff; padding: 10px; }
+    nav a { color: white; margin: 0 15px; text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+    /* Dropdown menu styles */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #444;
+      min-width: 160px;
+      z-index: 1;
+    }
+    .dropdown-content a {
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-content a:hover { background-color: #555; }
+    .dropdown:hover .dropdown-content { display: block; }
+    section { padding: 20px; max-width: 800px; margin: auto; }
+    h2 { border-bottom: 1px solid #ccc; padding-bottom: 5px; }
+    ul { list-style: disc inside; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">About Me</a>
+    <div class="dropdown">
+      <a href="projects.html">Projects ▼</a>
+      <div class="dropdown-content">
+        <a href="projects.html#cisco">Cisco Packet Tracer</a>
+        <a href="projects.html#athome">At Home Labs</a>
+        <a href="projects.html#kali">Kali Linux</a>
+      </div>
+    </div>
+  </nav>
+
+  <section id="bio">
+    <h2>Bio</h2>
+    <p>Your bio goes here.</p>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <p>Details about your work experience.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <p>List your skills here.</p>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <p>Your certifications go here.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: your.email@example.com</p>
+  </section>
+</body>
+</html>
