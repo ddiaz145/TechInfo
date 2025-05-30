@@ -11,10 +11,11 @@
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0 0 200px 0; /* Extra bottom space to allow full scroll */
+      padding: 0 0 200px 0;
       background: #f9f9f9;
       color: #333;
     }
+
     nav {
       background: #333;
       padding: 10px 0;
@@ -24,6 +25,7 @@
       top: 0;
       z-index: 10;
     }
+
     nav a {
       color: white;
       margin: 0 25px;
@@ -31,13 +33,16 @@
       font-weight: bold;
       font-size: 18px;
     }
+
     nav a:hover {
       text-decoration: underline;
     }
+
     .dropdown {
       display: inline-block;
       position: relative;
     }
+
     .dropdown-content {
       display: none;
       position: absolute;
@@ -47,15 +52,18 @@
       left: 0;
       top: 100%;
     }
+
     .dropdown-content a {
       color: white;
       padding: 10px 15px;
       text-decoration: none;
       display: block;
     }
+
     .dropdown-content a:hover {
       background-color: #555;
     }
+
     .dropdown:hover .dropdown-content {
       display: block;
     }
@@ -68,11 +76,7 @@
       flex-direction: column;
       padding: 25px 30px;
       margin: 0 auto 80px auto;
-      max-width: 600px;
-      background: white;
-      border: 2px solid black;
-      border-radius: 15px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 700px;
       opacity: 0;
       transform: translateY(30px);
       transition: opacity 0.6s ease-out, transform 0.6s ease-out;
@@ -86,10 +90,21 @@
     }
 
     h2 {
-      border-bottom: 2px solid #eee;
-      padding-bottom: 8px;
-      margin-bottom: 15px;
-      color: #444;
+      font-size: 2.2em;
+      font-weight: bold;
+      color: transparent;
+      -webkit-text-stroke: 1.5px #000;
+      position: relative;
+      margin-bottom: 40px;
+    }
+
+    h2::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      background-color: #000;
+      margin: 10px auto 0 auto;
     }
 
     #contact {
