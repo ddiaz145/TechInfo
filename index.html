@@ -191,42 +191,52 @@
       background-color: #fff;
       border: 2px solid #000;
       border-radius: 20px;
-      padding: 10px 20px;
+      padding: 12px 25px;
       font-weight: bold;
       box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+      font-size: 1.1em;
     }
 
     .certification-container {
       display: flex;
       justify-content: center;
-      gap: 30px;
+      gap: 40px;
       margin-top: 30px;
+      flex-wrap: wrap;
     }
 
     .certification-bubble {
       background-color: #fff;
       border: 2px solid #000;
-      border-radius: 50%;
-      width: 150px;
-      height: 150px;
+      border-radius: 25px;
+      width: 220px;
+      height: 120px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .certification-logo {
-      width: 60px;
-      height: 60px;
-      object-fit: contain;
-      margin-bottom: 10px;
-    }
-
-    .certification-bubble p {
+      padding: 15px 20px;
       font-weight: bold;
+      font-size: 1.1em;
+      text-align: center;
       color: #333;
-      margin: 0;
+    }
+
+    .certification-bubble .title {
+      margin-bottom: 12px;
+      font-size: 1.3em;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #000;
+    }
+
+    .certification-bubble .code {
+      font-size: 0.9em;
+      margin-top: 5px;
+      color: #555;
+      word-break: break-all;
+      user-select: all;
     }
   </style>
 </head>
@@ -305,12 +315,12 @@
       <h2>Certifications</h2>
       <div class="certification-container">
         <div class="certification-bubble">
-          <img src="https://www.freepnglogos.com/uploads/cisco-logo-png/cisco-logo-png-transparent-3.png" alt="CCNA Logo" class="certification-logo" />
-          <p>CCNA</p>
+          <div class="title">CCNA 200-301</div>
+          <div class="code">Verification Code:<br>CSCO14812243</div>
         </div>
         <div class="certification-bubble">
-          <img src="https://www.comptia.org/-/media/images/certifications/security-plus/security-plus-logo.png" alt="CompTIA Security+ Logo" class="certification-logo" />
-          <p>CompTIA Security+</p>
+          <div class="title">CompTIA Security+</div>
+          <div class="code">Verification Code:<br>COMP001022713192</div>
         </div>
       </div>
     </div>
