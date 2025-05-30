@@ -16,6 +16,10 @@
       background: #333;
       padding: 10px 0;
       text-align: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 10;
     }
     nav a {
       color: white;
@@ -53,20 +57,25 @@
     .dropdown:hover .dropdown-content {
       display: block;
     }
-    /* Section styling with transition and larger spacing */
+    /* Section styling with full viewport height and centering */
     section {
+      min-height: 90vh; /* almost full viewport height */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 25px 30px;
+      margin: 0 auto 50px auto; /* small margin between sections */
       max-width: 600px;
-      margin: 60px auto 100px auto; /* more space above and below */
       background: white;
       border: 2px solid black;
       border-radius: 15px;
-      padding: 25px 30px;
-      text-align: center;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
 
       opacity: 0;
       transform: translateY(30px);
       transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      text-align: center;
+      flex-direction: column;
     }
     section.visible {
       opacity: 1;
@@ -83,6 +92,9 @@
       text-align: left;
       display: inline-block;
       margin: 0 auto;
+      max-height: 50vh;
+      overflow-y: auto;
+      padding-right: 10px; /* for scrollbar spacing */
     }
     /* Contact style */
     #contact {
@@ -91,6 +103,7 @@
       justify-content: center;
       gap: 10px;
       font-size: 18px;
+      flex-wrap: wrap;
     }
     #contact img {
       width: 24px;
@@ -104,6 +117,10 @@
     }
     #contact a:hover {
       text-decoration: underline;
+    }
+    /* Push body content below fixed nav */
+    body > nav + section {
+      margin-top: 70px;
     }
   </style>
 </head>
@@ -121,31 +138,41 @@
   </nav>
 
   <section id="bio">
-    <h2>Bio</h2>
-    <p>Your bio goes here.</p>
+    <div>
+      <h2>Bio</h2>
+      <p>Your bio goes here.</p>
+    </div>
   </section>
 
   <section id="experience">
-    <h2>Experience</h2>
-    <p>Details about your work experience.</p>
+    <div>
+      <h2>Experience</h2>
+      <p>Details about your work experience.</p>
+    </div>
   </section>
 
   <section id="skills">
-    <h2>Skills</h2>
-    <p>List your skills here.</p>
+    <div>
+      <h2>Skills</h2>
+      <p>List your skills here.</p>
+    </div>
   </section>
 
   <section id="certifications">
-    <h2>Certifications</h2>
-    <p>Your certifications go here.</p>
+    <div>
+      <h2>Certifications</h2>
+      <p>Your certifications go here.</p>
+    </div>
   </section>
 
   <section id="contact">
-    <h2>Contact</h2>
-    <a href="mailto:your.email@example.com">your.email@example.com</a>
-    <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn" />
-    </a>
+    <div>
+      <h2>Contact</h2>
+      <a href="mailto:your.email@example.com">your.email@example.com</a>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn" />
+      </a>
+    </div>
   </section>
 
   <script>
