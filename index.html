@@ -15,7 +15,7 @@
     nav {
       background: #333;
       padding: 10px 0;
-      text-align: center; /* Center nav items */
+      text-align: center;
     }
     nav a {
       color: white;
@@ -53,39 +53,44 @@
     .dropdown:hover .dropdown-content {
       display: block;
     }
+    /* Center and style each subsection container */
     section {
-      padding: 20px;
-      max-width: 800px;
-      margin: 40px auto;
+      max-width: 600px;
+      margin: 30px auto;
       background: white;
+      border: 2px solid black;
+      border-radius: 15px;
+      padding: 25px 30px;
+      text-align: center;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      border-radius: 8px;
     }
     h2 {
       border-bottom: 2px solid #eee;
-      padding-bottom: 5px;
+      padding-bottom: 8px;
       margin-bottom: 15px;
       color: #444;
     }
     ul {
       list-style: disc inside;
+      text-align: left;
+      display: inline-block;
+      margin: 0 auto;
     }
     /* Contact style */
     #contact {
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 10px;
       font-size: 18px;
     }
     #contact img {
       width: 24px;
       height: 24px;
-      vertical-align: middle;
       filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(101%) contrast(101%);
-      /* makes the icon white to match nav */
     }
     #contact a {
-      color: #0077b5; /* LinkedIn blue */
+      color: #0077b5;
       text-decoration: none;
       font-weight: bold;
     }
@@ -131,7 +136,6 @@
     <h2>Contact</h2>
     <a href="mailto:your.email@example.com">your.email@example.com</a>
     <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
-      <!-- LinkedIn SVG icon -->
       <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn" />
     </a>
   </section>
