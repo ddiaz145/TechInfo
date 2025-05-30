@@ -17,7 +17,6 @@
       color: #333;
     }
 
-    /* Site title */
     .site-title {
       margin: 0;
       padding: 40px 0 20px 0;
@@ -141,7 +140,6 @@
       text-decoration: underline;
     }
 
-    /* Timeline styling */
     .timeline {
       position: relative;
       padding-left: 30px;
@@ -172,6 +170,11 @@
       border-radius: 8px;
       box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
     }
+
+    .timeline-content p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
   </style>
 </head>
 <body>
@@ -194,7 +197,7 @@
   <section id="bio">
     <div>
       <h2>Bio</h2>
-      <p>Hi! My name is David Diaz and I'm a very passionate Network Engineer enthusiast. I have an associates degree in IT Information Systems but I specialize in the Networking field. I've developed a strong foundation of taking responsibility of a whole network infrastructure, whether that would be setting up routing protocols, overviewing health devices, creating VLANs or backing up active configuration files. I tend to have a very strong personality which led to me land a lead network engineering role in my internship at ExpGateway. Curiosity is what keeps me going in this long everlasting field, As of now I'm learning Kali Lunix to see what loopholes I can find within my home lab to streghten my knowledge of securing the infrastructures I love to build! </p>
+      <p>Hi! My name is David Diaz and I'm a very passionate Network Engineer enthusiast. I have an associates degree in IT Information Systems but I specialize in the Networking field. I've developed a strong foundation of taking responsibility of a whole network infrastructure, whether that would be setting up routing protocols, overviewing health devices, creating VLANs or backing up active configuration files. I tend to have a very strong personality which led to me land a lead network engineering role in my internship at ExpGateway. Curiosity is what keeps me going in this long everlasting field, as of now I'm learning Kali Lunix to see what loopholes I can find within my home lab to streghten my knowledge of securing the infrastructures I love to build!</p>
     </div>
   </section>
 
@@ -202,6 +205,8 @@
     <div>
       <h2>Experience</h2>
       <div class="timeline">
+
+        <!-- Newer Job First -->
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
@@ -211,14 +216,18 @@
           </div>
         </div>
 
+        <!-- Older Job Last -->
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <h3>Network Technician</h3>
-            <p><strong>NetSecure Systems</strong> — Jan 2022 to Present</p>
-            <p>Installed and maintained network infrastructure, configured routers/switches, and led security audits for enterprise clients.</p>
+            <h3>Sales Representative</h3>
+            <p><strong>Maxs Cabinets</strong> — July 2024 to Dec 2024</p>
+            <p><strong>Customer Engagement:</strong> Provided exceptional customer service, actively listening to and understanding customer needs to recommend products and solutions that best meet their requirements, leading to positive customer feedback.</p>
+            <p><strong>Problem Resolution:</strong> Quickly addressed customer concerns by offering alternatives or solutions, helping to improve customer satisfaction and retention.</p>
+            <p><strong>Team Collaboration & Workflow Coordination:</strong> Worked alongside team members to coordinate incoming calls about order status, new inquiries, and questions, allowing for a seamless workflow.</p>
           </div>
         </div>
+
       </div>
     </div>
   </section>
