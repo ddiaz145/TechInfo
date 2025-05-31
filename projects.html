@@ -5,10 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projects</title>
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0 20px 100px;
+      padding: 0 0 200px 0;
       background: #f4f4f4;
       color: #333;
     }
@@ -45,13 +49,43 @@
       text-decoration: underline;
     }
 
+    .dropdown {
+      display: inline-block;
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #444;
+      min-width: 160px;
+      z-index: 1;
+      left: 0;
+      top: 100%;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #555;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
     h2 {
       text-align: center;
-      margin-top: 60px;
       font-size: 24px;
       border-bottom: 2px solid #333;
       display: inline-block;
       padding-bottom: 5px;
+      margin-top: 60px;
     }
 
     .carousel-container {
@@ -113,6 +147,14 @@
 
   <nav>
     <a href="index.html#bio">About Me</a>
+    <div class="dropdown">
+      <a href="#">Projects ▼</a>
+      <div class="dropdown-content">
+        <a href="#cisco">Cisco Packet Tracer</a>
+        <a href="#athome">At Home Labs</a>
+        <a href="#kali">Kali Linux</a>
+      </div>
+    </div>
   </nav>
 
   <!-- Cisco Packet Tracer Section -->
