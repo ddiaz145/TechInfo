@@ -13,9 +13,36 @@
       color: #333;
     }
 
-    h1 {
+    .site-title {
+      margin: 0;
+      padding: 40px 0 20px 0;
       text-align: center;
-      padding: 40px 0 20px;
+      font-size: 3em;
+      font-weight: bold;
+      color: white;
+      background-color: #111;
+    }
+
+    nav {
+      background: #000;
+      padding: 10px 0;
+      text-align: center;
+      width: 100%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 25px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
     }
 
     h2 {
@@ -80,7 +107,13 @@
 </head>
 <body>
 
-  <h1>My Projects</h1>
+  <header>
+    <h1 class="site-title">David Diaz</h1>
+  </header>
+
+  <nav>
+    <a href="index.html#bio">About Me</a>
+  </nav>
 
   <!-- Cisco Packet Tracer Section -->
   <section id="cisco">
