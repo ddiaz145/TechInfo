@@ -49,43 +49,16 @@
       text-decoration: underline;
     }
 
-    .dropdown {
-      display: inline-block;
-      position: relative;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #444;
-      min-width: 160px;
-      z-index: 1;
-      left: 0;
-      top: 100%;
-    }
-
-    .dropdown-content a {
-      color: white;
-      padding: 10px 15px;
-      text-decoration: none;
-      display: block;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #555;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
+    section {
+      text-align: center;
+      padding: 50px 20px;
     }
 
     h2 {
-      text-align: center;
-      font-size: 24px;
+      font-size: 2em;
       border-bottom: 2px solid #333;
       display: inline-block;
-      padding-bottom: 5px;
-      margin-top: 60px;
+      margin-bottom: 20px;
     }
 
     .carousel-container {
@@ -150,24 +123,64 @@
     <div class="dropdown">
       <a href="#">Projects ▼</a>
       <div class="dropdown-content">
-        <a href="#cisco">Cisco Packet Tracer</a>
-        <a href="#athome">At Home Labs</a>
+        <a href="#expGateway">ExpGateway</a>
         <a href="#kali">Kali Linux</a>
+        <a href="#raspberryPi">Raspberry Pi</a>
+        <a href="#athome">At Home Labs</a>
+        <a href="#cisco">Cisco Packet Tracer</a>
       </div>
     </div>
   </nav>
 
-  <!-- Cisco Packet Tracer Section -->
-  <section id="cisco">
-    <h2>Cisco Packet Tracer</h2>
+  <!-- ExpGateway Section -->
+  <section id="expGateway">
+    <h2>ExpGateway Internship</h2>
     <div class="carousel-container" data-carousel>
       <div class="carousel-slide active">
-        <p>Project 1: Routing Protocols Simulation</p>
-        <a class="pdf-link" href="pdfs/routing_protocols.pdf" target="_blank">View PDF</a>
+        <p>Project 1: Network Configuration and Troubleshooting</p>
+        <a class="pdf-link" href="pdfs/expGateway_network_config.pdf" target="_blank">View PDF</a>
       </div>
       <div class="carousel-slide">
-        <p>Project 2: VLAN and Trunking</p>
-        <a class="pdf-link" href="pdfs/vlan_trunking.pdf" target="_blank">View PDF</a>
+        <p>Project 2: Security Protocol Implementation</p>
+        <a class="pdf-link" href="pdfs/expGateway_security_protocol.pdf" target="_blank">View PDF</a>
+      </div>
+      <div class="carousel-buttons">
+        <button class="prev">← Prev</button>
+        <button class="next">Next →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kali Linux Section -->
+  <section id="kali">
+    <h2>Kali Linux</h2>
+    <div class="carousel-container" data-carousel>
+      <div class="carousel-slide active">
+        <p>Project 1: Network Scanning with Nmap</p>
+        <a class="pdf-link" href="pdfs/kali_nmap_scan.pdf" target="_blank">View PDF</a>
+      </div>
+      <div class="carousel-slide">
+        <p>Project 2: Password Cracking with Hydra</p>
+        <a class="pdf-link" href="pdfs/kali_hydra_crack.pdf" target="_blank">View PDF</a>
+      </div>
+      <div class="carousel-buttons">
+        <button class="prev">← Prev</button>
+        <button class="next">Next →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Raspberry Pi Section -->
+  <section id="raspberryPi">
+    <h2>Raspberry Pi</h2>
+    <div class="carousel-container" data-carousel>
+      <div class="carousel-slide active">
+        <p>Project 1: Pi-hole DNS Ad Blocking Server</p>
+        <a class="pdf-link" href="pdfs/raspberry_pi_pihole.pdf" target="_blank">View PDF</a>
+      </div>
+      <div class="carousel-slide">
+        <p>Project 2: Temperature Sensor Logger</p>
+        <a class="pdf-link" href="pdfs/raspberry_pi_temp_sensor.pdf" target="_blank">View PDF</a>
       </div>
       <div class="carousel-buttons">
         <button class="prev">← Prev</button>
@@ -186,58 +199,6 @@
       </div>
       <div class="carousel-slide">
         <p>Lab 2: Securing a Home Router</p>
-        <a class="pdf-link" href="pdfs/router_security.pdf" target="_blank">View PDF</a>
-      </div>
-      <div class="carousel-buttons">
-        <button class="prev">← Prev</button>
-        <button class="next">Next →</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Kali Linux Section -->
-  <section id="kali">
-    <h2>Kali Linux</h2>
-    <div class="carousel-container" data-carousel>
-      <div class="carousel-slide active">
-        <p>Project 1: Network Scanning with Nmap</p>
-        <a class="pdf-link" href="pdfs/nmap_scan.pdf" target="_blank">View PDF</a>
-      </div>
-      <div class="carousel-slide">
-        <p>Project 2: Password Cracking with Hydra</p>
-        <a class="pdf-link" href="pdfs/hydra_crack.pdf" target="_blank">View PDF</a>
-      </div>
-      <div class="carousel-buttons">
-        <button class="prev">← Prev</button>
-        <button class="next">Next →</button>
-      </div>
-    </div>
-  </section>
-
-  <script>
-    document.querySelectorAll('[data-carousel]').forEach(carousel => {
-      const slides = carousel.querySelectorAll('.carousel-slide');
-      const prevBtn = carousel.querySelector('.prev');
-      const nextBtn = carousel.querySelector('.next');
-      let index = 0;
-
-      function showSlide(i) {
-        slides.forEach((slide, idx) => {
-          slide.classList.toggle('active', idx === i);
-        });
-      }
-
-      prevBtn.addEventListener('click', () => {
-        index = (index - 1 + slides.length) % slides.length;
-        showSlide(index);
-      });
-
-      nextBtn.addEventListener('click', () => {
-        index = (index + 1) % slides.length;
-        showSlide(index);
-      });
-    });
-  </script>
-
-</body>
-</html>
+        <a class="pdf-link" href="pdfs/router_security.pdf" target
+::contentReference[oaicite:0]{index=0}
+ 
