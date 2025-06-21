@@ -5,87 +5,138 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projects</title>
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
+    /* Enhanced CSS for visual depth and readability */
+    html { scroll-behavior: smooth; }
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0 0 200px 0;
-      background: #f4f4f4;
-      color: #333;
+      background: linear-gradient(135deg, #1f4037, #99f2c8);
+      color: #f0f0f0;
+      text-shadow: 0 0 3px rgba(0,0,0,0.7);
     }
-
     .site-title {
       margin: 0;
-      padding: 40px 0 20px 0;
+      padding: 40px 0 20px;
       text-align: center;
       font-size: 3em;
-      font-weight: bold;
-      color: white;
-      background-color: #111;
+      font-weight: 900;
+      color: #e0e0e0;
+      background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
     }
-
     nav {
-      background: #000;
-      padding: 10px 0;
+      background: rgba(15,32,39,0.95);
+      padding: 12px 0;
       text-align: center;
-      width: 100%;
       position: sticky;
       top: 0;
       z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
     }
-
     nav a {
-      color: white;
+      color: #99f2c8;
       margin: 0 25px;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 700;
       font-size: 18px;
+      transition: color 0.3s;
     }
-
     nav a:hover {
+      color: #d1ffd6;
       text-decoration: underline;
     }
-
+    .dropdown {
+      display: inline-block;
+      position: relative;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: rgba(15,32,39,0.95);
+      border-radius: 6px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+      left: 0; top: 100%;
+    }
+    .dropdown-content a {
+      display: block;
+      color: #99f2c8;
+      padding: 12px 20px;
+      font-weight: 600;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .dropdown-content a:hover {
+      background-color: #317f69;
+      color: #e0f7f4;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
     section {
       text-align: center;
       padding: 50px 20px;
     }
-
     h2 {
-      font-size: 2em;
-      border-bottom: 2px solid #333;
-      display: inline-block;
+      font-size: 2.4em;
+      font-weight: 900;
+      color: #a3f7bf;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
       margin-bottom: 20px;
+      position: relative;
     }
-
+    h2::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: #00b386;
+      margin: 10px auto 0;
+      border-radius: 2px;
+      box-shadow: 0 0 8px #00b386;
+    }
     .carousel-container {
       position: relative;
       max-width: 700px;
       margin: 30px auto;
-      background: white;
+      background: rgba(0,0,0,0.4);
       border-radius: 8px;
       padding: 20px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
     }
-
     .carousel-slide {
       display: none;
       text-align: center;
     }
-
     .carousel-slide.active {
       display: block;
     }
-
+    .carousel-slide h3 {
+      margin-top: 0;
+      color: #00cc77;
+      text-shadow: 0 0 6px #00cc77;
+    }
+    .carousel-slide p {
+      color: #e3f6f5;
+      line-height: 1.6;
+      font-size: 1.1em;
+    }
+    .pdf-link {
+      margin-top: 15px;
+      display: inline-block;
+      color: #99f2c8;
+      font-weight: bold;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .pdf-link:hover {
+      color: #d1ffd6;
+      text-decoration: underline;
+    }
     .carousel-buttons {
       display: flex;
       justify-content: space-between;
       margin-top: 15px;
     }
-
     .carousel-buttons button {
       background-color: #000;
       color: #fff;
@@ -93,37 +144,21 @@
       padding: 8px 16px;
       cursor: pointer;
       border-radius: 4px;
+      transition: background-color 0.3s;
     }
-
     .carousel-buttons button:hover {
       background-color: #444;
-    }
-
-    .pdf-link {
-      margin-top: 15px;
-      display: inline-block;
-      text-decoration: none;
-      color: #0077b5;
-      font-weight: bold;
-    }
-
-    .pdf-link:hover {
-      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-
-  <header>
-    <h1 class="site-title">David Diaz</h1>
-  </header>
-
+  <header><h1 class="site-title">David Diaz – Projects</h1></header>
   <nav>
     <a href="index.html#bio">About Me</a>
     <div class="dropdown">
       <a href="#">Projects ▼</a>
       <div class="dropdown-content">
-        <a href="#expGateway">ExpGateway</a>
+        <a href="#expGateway">ExpGateway Internship</a>
         <a href="#kali">Kali Linux</a>
         <a href="#raspberryPi">Raspberry Pi</a>
         <a href="#athome">At Home Labs</a>
@@ -132,7 +167,7 @@
     </div>
   </nav>
 
-  <!-- ExpGateway Section -->
+  <!-- ExpGateway -->
   <section id="expGateway">
     <h2>ExpGateway Internship</h2>
     <div class="carousel-container" data-carousel>
@@ -152,7 +187,7 @@
     </div>
   </section>
 
-  <!-- Kali Linux Section -->
+  <!-- Kali Linux -->
   <section id="kali">
     <h2>Kali Linux</h2>
     <div class="carousel-container" data-carousel>
@@ -182,9 +217,9 @@
       </div>
     </div>
   </section>
-
-  <!-- Raspberry Pi Section -->
-  <section id="raspberryPi">
+  
+  <!-- Raspberry Pi -->
+   <section id="raspberryPi">
     <h2>Raspberry Pi</h2>
     <div class="carousel-container" data-carousel>
       <div class="carousel-slide active">
@@ -214,7 +249,8 @@
     </div>
   </section>
 
-  <!-- At Home Labs Section -->
+
+  <!-- At Home Labs -->
   <section id="athome">
     <h2>At Home Labs</h2>
     <div class="carousel-container" data-carousel>
@@ -249,9 +285,8 @@
       </div>
     </div>
   </section>
-
-  <!-- Cisco Packet Tracer Section -->
-  <section id="cisco">
+  <!-- Cisco Packet Tracer -->
+ <section id="cisco">
     <h2>Cisco Packet Tracer</h2>
     <div class="carousel-container" data-carousel>
       <div class="carousel-slide active">
@@ -285,32 +320,26 @@
       </div>
     </div>
   </section>
-
+  
   <script>
-    // Carousel functionality for all carousels on page
     document.querySelectorAll('[data-carousel]').forEach(carousel => {
       const slides = carousel.querySelectorAll('.carousel-slide');
       const prevBtn = carousel.querySelector('.prev');
       const nextBtn = carousel.querySelector('.next');
       let currentIndex = 0;
 
-      function showSlide(index) {
-        slides.forEach((slide, i) => {
-          slide.classList.toggle('active', i === index);
-        });
+      function showSlide(i) {
+        slides.forEach((s, idx) => s.classList.toggle('active', idx === i));
       }
-
       prevBtn.addEventListener('click', () => {
         currentIndex = (currentIndex - 1 + slides.length) % slides.length;
         showSlide(currentIndex);
       });
-
       nextBtn.addEventListener('click', () => {
         currentIndex = (currentIndex + 1) % slides.length;
         showSlide(currentIndex);
       });
     });
   </script>
-
 </body>
 </html>
