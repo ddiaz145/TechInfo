@@ -10,11 +10,12 @@
     }
 
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0 0 200px 0;
-      background: #f9f9f9;
-      color: #333;
+      background: linear-gradient(135deg, #1f4037, #99f2c8);
+      color: #f0f0f0;
+      text-shadow: 0 0 3px rgba(0,0,0,0.7);
     }
 
     .site-title {
@@ -22,30 +23,34 @@
       padding: 40px 0 20px 0;
       text-align: center;
       font-size: 3em;
-      font-weight: bold;
-      color: white;
-      background-color: #111;
+      font-weight: 900;
+      color: #e0e0e0;
+      background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     }
 
     nav {
-      background: #000;
-      padding: 10px 0;
+      background: rgba(15, 32, 39, 0.95);
+      padding: 12px 0;
       text-align: center;
       width: 100%;
       position: sticky;
       top: 0;
       z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
     }
 
     nav a {
-      color: white;
+      color: #99f2c8;
       margin: 0 25px;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 700;
       font-size: 18px;
+      transition: color 0.3s ease;
     }
 
     nav a:hover {
+      color: #d1ffd6;
       text-decoration: underline;
     }
 
@@ -57,22 +62,27 @@
     .dropdown-content {
       display: none;
       position: absolute;
-      background-color: #444;
+      background-color: rgba(15, 32, 39, 0.95);
       min-width: 160px;
       z-index: 1;
       left: 0;
       top: 100%;
+      border-radius: 6px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.6);
     }
 
     .dropdown-content a {
-      color: white;
-      padding: 10px 15px;
+      color: #99f2c8;
+      padding: 12px 20px;
       text-decoration: none;
       display: block;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
     }
 
     .dropdown-content a:hover {
-      background-color: #555;
+      background-color: #317f69;
+      color: #e0f7f4;
     }
 
     .dropdown:hover .dropdown-content {
@@ -85,7 +95,7 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      padding: 25px 30px;
+      padding: 35px 40px;
       margin: 0 auto 80px auto;
       max-width: 700px;
       opacity: 0;
@@ -93,6 +103,9 @@
       transition: opacity 0.6s ease-out, transform 0.6s ease-out;
       text-align: center;
       scroll-margin-top: 150px;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
     }
 
     section.visible {
@@ -101,10 +114,10 @@
     }
 
     h2 {
-      font-size: 2.2em;
-      font-weight: bold;
-      color: white;
-      -webkit-text-stroke: 1.5px black;
+      font-size: 2.4em;
+      font-weight: 900;
+      color: #a3f7bf;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
       position: relative;
       margin-bottom: 40px;
     }
@@ -112,41 +125,108 @@
     h2::after {
       content: "";
       display: block;
-      width: 60px;
-      height: 3px;
-      background-color: #000;
+      width: 80px;
+      height: 4px;
+      background: #00b386;
       margin: 10px auto 0 auto;
+      border-radius: 2px;
+      box-shadow: 0 0 8px #00b386;
+    }
+
+    p {
+      font-size: 1.15em;
+      line-height: 1.7;
+      color: #e3f6f5;
+      max-width: 600px;
+      margin: 0 auto 20px auto;
+      text-shadow: 0 0 2px rgba(0,0,0,0.6);
     }
 
     #contact {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
+      gap: 15px;
       font-size: 18px;
       flex-wrap: wrap;
+      color: #b2f7d9;
     }
 
     #contact img {
-      width: 24px;
-      height: 24px;
-      filter: invert(35%) sepia(88%) saturate(4071%) hue-rotate(199deg) brightness(95%) contrast(91%);
+      width: 28px;
+      height: 28px;
+      filter: invert(65%) sepia(90%) saturate(400%) hue-rotate(160deg) brightness(110%) contrast(95%);
+      transition: filter 0.3s ease;
     }
 
     #contact a {
-      color: #0077b5;
+      color: #a2f0d6;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 700;
+      transition: color 0.3s ease;
     }
 
     #contact a:hover {
+      color: #00b386;
       text-decoration: underline;
+    }
+
+    .bubble-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .bubble {
+      background-color: #009966;
+      border: 2px solid #00cc77;
+      border-radius: 25px;
+      padding: 12px 25px;
+      font-weight: 700;
+      color: #e0f7f4;
+      box-shadow: 0 4px 10px rgba(0, 204, 119, 0.4);
+      transition: background-color 0.3s ease;
+    }
+
+    .bubble:hover {
+      background-color: #00cc77;
+      cursor: default;
+      box-shadow: 0 6px 15px rgba(0, 255, 130, 0.7);
+    }
+
+    .certification-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 35px;
+      margin-top: 40px;
+    }
+
+    .certification-bubble {
+      background-color: #004d33;
+      border: 3px solid #00b386;
+      border-radius: 50%;
+      width: 180px;
+      height: 180px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 16px rgba(0, 179, 134, 0.5);
+      font-weight: 700;
+      font-size: 17px;
+      padding: 15px;
+      text-align: center;
+      color: #a2f0d6;
+      text-shadow: 0 0 5px #00cc77;
     }
 
     .timeline {
       position: relative;
       padding-left: 30px;
-      border-left: 3px solid #000;
+      border-left: 3px solid #00b386;
       margin-top: 20px;
       text-align: left;
     }
@@ -158,68 +238,27 @@
 
     .timeline-dot {
       position: absolute;
-      left: -9px;
+      left: -11px;
       top: 5px;
-      width: 18px;
-      height: 18px;
-      background-color: white;
-      border: 3px solid black;
+      width: 20px;
+      height: 20px;
+      background-color: #00cc77;
+      border: 3px solid #004d33;
       border-radius: 50%;
+      box-shadow: 0 0 8px #00cc77;
     }
 
     .timeline-content {
-      background-color: #f0f0f0;
+      background-color: rgba(255, 255, 255, 0.15);
       padding: 20px;
       border-radius: 8px;
-      box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+      box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+      color: #d0f0e5;
     }
 
     .timeline-content p {
       margin-bottom: 15px;
       line-height: 1.6;
-    }
-
-    .bubble-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 20px;
-    }
-
-    .bubble {
-      background-color: #fff;
-      border: 2px solid #000;
-      border-radius: 20px;
-      padding: 10px 20px;
-      font-weight: bold;
-      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
-    }
-
-    .certification-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 30px;
-      margin-top: 30px;
-    }
-
-    .certification-bubble {
-      background-color: #fff;
-      border: 2px solid #000;
-      border-radius: 50%;
-      width: 170px;
-      height: 170px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      font-weight: bold;
-      font-size: 16px;
-      padding: 10px;
-      text-align: center;
-      color: #333;
     }
   </style>
 </head>
@@ -233,11 +272,13 @@
     <div class="dropdown">
       <a href="projects.html">Projects ▼</a>
       <div class="dropdown-content">
-        <a href="projects.html#cisco">Cisco Packet Tracer</a>
-        <a href="projects.html#athome">At Home Labs</a>
-        <a href="projects.html#kali">Kali Linux</a>
-        <a href="projects.html#kali">Rasbperry Pi</a>
-        <a href="projects.html#kali">ExpGateway (Internship)</a>
+        <a href="projects.html#cisco">ExpGateway (Internship)</a>
+        <a href="projects.html#athome">Kali Linux</a>
+        <a href="projects.html#kali">At-Home Labs</a>
+        <a href="projects.html#raspberry">Raspberry Pi</a>
+        <a href="projects.html#expgateway">Cisco Packet Tracer</a>
+      </div>
+    </div>
   </nav>
 
   <section id="bio">
@@ -334,13 +375,8 @@
       });
     }
 
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        revealOnScroll();
-        window.addEventListener('scroll', revealOnScroll);
-        window.addEventListener('resize', revealOnScroll);
-      }, 50);
-    });
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
   </script>
 </body>
 </html>
