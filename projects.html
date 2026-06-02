@@ -353,29 +353,24 @@
     <h2>Cisco Packet Tracer</h2>
     <div class="carousel-container" data-carousel>
       <div class="carousel-slide active">
-        <h3>Mega OSPF Network</h3>
-        <p>The objective of this virtual lab was to simulate OSPF connectivity between two buildings, each with its own VLANs for devices like servers and printers. I used DHCP servers, ROAS with trunk links, and PAgP for redundancy and traffic optimization. ACLs were implemented to block Building-A from accessing printers in Building-B, ensuring only local access within Building-B.</p>
+        <h3>Real World Connection 1</h3>
+        <p>This virtual lab focused on building a small business network from scratch using what I believe is a real company environment. This network topology included VLANs for different departments and services such as DHCP, DNS, NTP, and management servers. I also implemented redundancy using HSRP, improved bandwidth with PAgP, and allowed full connectivity with OSPF. ACLs were also integrated to separate management subnets that were also configured to improve security and organization throughout the network.</p>
         <a href="Mega%20OSPF%20(c).pdf" target="_blank" class="pdf-link">View Project PDF</a>
       </div>
       <div class="carousel-slide">
-        <h3>Mega BGP Network</h3>
+        <h3>Real World Connection 1.5</h3>
         <p>The goal of this virtual lab was to gain hands-on experience with BGP, specifically iBGP, since eBGP isn’t supported in Packet Tracer. Alongside BGP, I implemented Inter-VLAN routing to reduce router traffic, and added DHCP, NTP, and SNMP servers to simulate real-world network services. Security measures, including usernames and passwords, were configured to enhance realism and reinforce best practices.</p>
         <a href="BGP%20(c).pdf" target="_blank" class="pdf-link">View Project PDF</a>
       </div>
        <div class="carousel-slide">
         <h3>Wireless Network</h3>
-        <p>The goal of this virtual lab was to set up a wireless subnet within a network using Cisco Packet Tracer. Due to limitations, I configured one WLAN and four wired LANs, setting static routes on both the WLC and access point. DHCP was implemented to simulate real-world IP addressing.</p>
+        <p>This virtual lab was to expand on my “Real World Connection 1” project by focusing on features and configurations that were limited in Packet Tracer. This network used a collapsed core topology with routers handling ROAS, DHCP services, PAT, and OSPF. Security was a major focus in this lab with configurations including DHCP snooping, Dynamic ARP Inspection, Port Security, and ACLs to restrict communication and implement a secue framework.</p>
         <a href="Wireless%20Network%20(c).pdf" target="_blank" class="pdf-link">View Project PDF</a>
        </div>
       <div class="carousel-slide">
-        <h3>Tracert</h3>
-        <p>The goal of this virtual lab was to build a network topology that maps the path packets take from my personal computer to the Google DNS server. This helped visualize router-to-router traffic flow and identify potential points of failure. Creating the topology provided a clearer understanding of how data travels across the network without needing to see the physical layout.</p>
+        <h3>Dual Stack IP</h3>
+        <p>This virtual lab focused on configuring a dual-stack IPv4 and IPv6 address scheme in a  two-layer core design. The topology included multiple VLANs per building with ROAS configuration, DHCPv6 using Router Advertisements, DNS (AAAA records), and loopback interfaces for both IPv4 and IPv6 to allow easy access. OSPFv2, OSPFv3, and EtherChannel were also configured to provide full connectivity and improve network performance.</p>
         <a href="Tracert%20(c).pdf" target="_blank" class="pdf-link">View Project PDF</a>
-       </div>
-        <div class="carousel-slide">
-        <h3>NTP Synchronization</h3>
-        <p>The objective of this virtual lab was to provide accurate time synchronization across the network. Consistent time is essential for correlating syslog entries and troubleshooting issues, especially when events occur across multiple devices. Without synchronized clocks, identifying the exact time of incidents becomes difficult and unreliable.</p>
-        <a href="NTP%20(c).pdf" target="_blank" class="pdf-link">View Project PDF</a>
        </div>
        <div class="carousel-buttons">
         <button class="prev">← Prev</button>
